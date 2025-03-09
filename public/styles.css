@@ -1,0 +1,1183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* margin: 0; */
+    /* padding: 0; */
+    /* background: linear-gradient(to right, #1E1E1E, #282828); */
+    color: #f4f4f4;
+    line-height: 1.6;
+    /* margin-bottom: 10vh; */
+    /* background: rgb(75,97,170); */
+    /* background: linear-gradient(90deg, rgba(75,97,170,1) 17%, rgba(13,13,13,0.8758096988795518) 100%, rgba(0,212,255,1) 100%); */
+    /* background: url("./images/hero-background.jpg") no-repeat center center/cover !important; */
+    background: url('./images/hero-background.jpg') no-repeat center center/cover;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px; 
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    padding-top: 20px;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    padding-top: 30px;
+    border-radius: 15px;
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        padding-top: 10rem;
+        font-size: 2.9rem;
+    }
+    .hero p {
+        padding-top: 1rem;
+        font-size: 1.3rem;
+    }
+    .hero {
+        height: 100%;
+    }
+
+
+}
+
+/* #landing-cta-button {
+
+} */
+
+.cta-button {
+    background: #ffcc00;
+    color: #333;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.trust-section {
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+}
+
+.trust-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-section {
+    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+    color: #ffffff;
+}
+
+.section-heading {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.section-paragraph {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    max-width: 700px;
+}
+
+.custom-list {
+    list-style: none !important;
+    padding-left: 0;
+}
+
+.custom-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 3rem;
+    font-size: 1rem;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.custom-list li::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+    color: #ffcc00;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.custom-list li:nth-child(4n+1)::before {
+    content: "📍"; /* First Icon */
+}
+.custom-list li:nth-child(4n+2)::before {
+    content: "🚀"; /* Second icon */
+}
+.custom-list li:nth-child(3)::before {
+    content: "📦";
+}
+.custom-list li:nth-child(4)::before {
+    content: "✈️";
+}
+
+.cta-button {
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.3);
+}
+
+/* Fade-in animation (Reusable from previous queries) */
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 1.8rem;
+    }
+    
+    .about-section {
+        text-align: center;
+        padding: 40px 15px;
+    }
+    
+    .section-paragraph {
+        max-width: 100%;
+    }
+
+    .custom-list {
+        list-style: none !important;
+    }
+
+    .custom-list li {
+        padding-left: 0;
+        text-align: left;
+        display: inline-block;
+        list-style: none !important;
+    }
+
+    .custom-list li::before {
+        list-style: none !important;
+        content: "" !important;
+
+    }
+}
+
+
+
+/* ✅ TESTIMONIALS - Modern & Animated */
+.testimonials {
+    text-align: center;
+    padding: 60px 10%;
+    background: linear-gradient(to right, #f8f9fa, #e3e7ea);
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.testimonial {
+    display: none;
+    text-align: center;
+    padding: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #444;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 4px solid #007bff;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.testimonial footer {
+    font-weight: bold;
+    color: #333;
+}
+
+/* ✅ CTA BANNER - High Impact */
+.cta-banner {
+    background: linear-gradient(45deg, #007bff, #6610f2);
+    text-align: center;
+    padding: 60px 10%;
+    color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cta-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cta-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: #ffcc00;
+    color: #222;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #ffaa00;
+    transform: scale(1.05);
+}
+
+/* ✅ FADE-IN ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ✅ MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 40px 5%;
+    }
+
+    .testimonial blockquote {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .cta-banner {
+        padding: 40px 5%;
+    }
+}
+
+
+/* ✅ NAVBAR - Sleek, Professional, and Balanced */
+.navbar {
+    background: rgba(34, 34, 34, 0.95);
+    color: white;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: fixed; */
+    top: 0;
+    width: 100vw !important;  /* ✅ Ensures it takes up the full viewport width */
+    max-width: 100% !important; /* ✅ Prevents unwanted shrinking */
+    left: 0;
+    right: 0;
+    position: fixed; /* ✅ Ensures it stays at the top */
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Fix Dropdown Overflow (Confirmed) */
+.navbar .dropdown-menu {
+    position: absolute !important; 
+    top: 100%;  
+    left: 0;  
+    margin-top: 0.5rem;  
+    background-color: #222; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
+    overflow: hidden;
+    z-index: 9999; /* ensures always on top */
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px; 
+    }
+}
+
+/* ✅ Animation class reusable (optional enhancement) */
+.fade-in {
+    animation: fadeIn ease 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 400px;
+}
+
+/* ✅ LOGO */
+.logo a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+/* ✅ NAVIGATION LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* ✅ Underline Animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #ffcc00;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* ✅ NAV ACTIONS (CTA + Language Toggle) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ✅ CTA BUTTON */
+.cta-button {
+    background: #ffcc00;
+    color: #222;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #ffaa00;
+    transform: scale(1.05);
+}
+
+/* ✅ LANGUAGE TOGGLE */
+.language-toggle {
+    background: transparent;
+    color: #ffcc00;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: 0.3s ease-in-out;
+}
+
+.language-toggle:hover {
+    color: #ffaa00;
+}
+
+/* ✅ HAMBURGER MENU */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+}
+
+/* ✅ MOBILE NAVIGATION */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: rgba(34, 34, 34, 0.95);
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.mobile-nav.show {
+    display: flex;
+}
+
+.mobile-nav li {
+    padding: 10px;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.mobile-nav a:hover {
+    color: #ffcc00;
+}
+
+/* ✅ MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    nav {
+        width: 95%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .cta-button {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+    }
+}
+
+/* ✅ NAVBAR DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    overflow: hidden;
+    display: none;
+    position: absolute !important;
+    background: rgba(34, 34, 34, 0.95);
+    list-style: none;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    padding: 10px 15px;
+}
+
+.dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.dropdown-menu a:hover {
+    background: #ffcc00;
+    color: #222;
+    border-radius: 5px;
+}
+
+/* ✅ MOBILE DROPDOWN */
+.mobile-dropdown-menu {
+    display: none;
+    background: rgba(34, 34, 34, 0.95);
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-dropdown-menu li {
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-dropdown-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+.mobile-dropdown a {
+    display: block;
+    font-weight: bold;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mobile-dropdown a:hover {
+    background: #ffcc00;
+    color: #222;
+    border-radius: 5px;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+    display: block;
+}
+
+
+/* ✅ FEATURES SECTION - Enhanced with Gradient & Animation */
+.features {
+    text-align: center;
+    padding: 60px 10%;
+    background: linear-gradient(135deg, #333, #7a8a97);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle Gradient Overlay */
+.features::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15));
+    z-index: 1;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ✅ FEATURE GRID */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* ✅ FEATURE BOXES - Modern Look */
+.feature-box {
+    background: linear-gradient(145deg, #443c3c, #333);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    min-height: 330px;
+}
+
+/* ✅ Hover Effect - Subtle Glow */
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #333, #a0a8ae);
+}
+
+/* ✅ ICON & TEXT STYLES */
+.feature-box h3 {
+    /* color: #007bff; */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* ✅ FADE-IN EFFECT WHEN SCROLLING */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-box {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+/* ✅ Staggered Animations */
+.feature-box:nth-child(1) { animation-delay: 0.2s; }
+.feature-box:nth-child(2) { animation-delay: 0.4s; }
+.feature-box:nth-child(3) { animation-delay: 0.6s; }
+.feature-box:nth-child(4) { animation-delay: 0.8s; }
+
+/* ✅ MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    .features {
+        padding: 40px 5%;
+    }
+
+    .feature-box {
+        padding: 20px;
+    }
+}
+
+
+/* ✅ SLIDESHOW CONTAINER */
+#custom-slideshow {
+    margin-top: -12.5rem !important;
+    max-width: 900px; /* ✅ Prevents it from being too big on large screens */
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ✅ SLIDESHOW IMAGES */
+.carousel-item img {
+    width: 100%;
+    height: 450px; /* ✅ Sets a reasonable height */
+    object-fit: cover; /* ✅ Ensures the image fits perfectly */
+    /* border-radius: 15px; */
+}
+
+/* ✅ CAROUSEL CAPTION */
+.carousel-caption {
+    position: absolute;
+    bottom: 20px; /* ✅ Moves text to bottom */
+    left: 20px; /* ✅ Moves text to bottom-left */
+    background: rgba(0, 0, 0, 0.7); /* ✅ Adds background for readability */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    max-width: 60%;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: left;
+}
+
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    #custom-slideshow {
+        margin-top: 5rem !important;
+        max-width: 100%;
+        text-overflow:no-wrap;
+        margin-bottom: 5rem;
+    }
+
+    .carousel-item {
+        height: 250px !important;
+        overflow: visible !important;
+    }
+
+    .carousel-item img {
+        height: 250px; /* ✅ Smaller height on mobile */
+    }
+
+
+    .carousel-caption {
+        position: fixed;
+        font-size: 0.9rem;
+        max-width: 80%;
+        background: none !important;
+        overflow: visible !important;
+    }
+
+    .carousel-caption p {
+        position: absolute;
+        top: 3rem;
+    }
+
+}
+
+/* ✅ WHAT WE DO SECTION */
+.what-we-do {
+    background: linear-gradient(to right, #1a1a1a, #333);
+    color: #fff;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ffcc00;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* ✅ INFO BOX STYLES */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.row a {
+    color: inherit !important;
+    text-decoration: inherit !important;
+    font-weight: inherit !important;
+}
+
+
+.info-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    min-height: 220px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.info-box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.info-box p {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* ✅ HOVER EFFECT */
+.info-box:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    #hero-container {
+      
+    }
+    .row {
+        row-gap: 30px; /* ✅ Adds vertical spacing between rows */
+    }
+    .what-we-do {
+        padding: 60px 5%;
+    }
+    
+
+    .info-box {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* ✅ OUR COMMITMENT SECTION */
+.our-commitment {
+    position: relative;
+    background: url("../images/commitment-bg.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    padding: 120px 10%;
+    text-align: center;
+    color: #fff;
+}
+
+/* ✅ DARK OVERLAY TO IMPROVE TEXT READABILITY */
+.commitment-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 80px 10%;
+    border-radius: 10px;
+}
+
+/* ✅ STYLING FOR TITLE */
+.commitment-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ffcc00;
+}
+
+/* ✅ MAIN TEXT */
+.commitment-text {
+    font-size: 1.3rem;
+    font-weight: 400;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* ✅ QUOTE STYLING */
+.commitment-quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 30px;
+    padding: 20px;
+    border-left: 4px solid #ffcc00;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.commitment-quote span {
+    display: block;
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* ✅ BUTTON STYLE */
+.our-commitment .btn-warning {
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s ease-in-out;
+}
+
+.our-commitment .btn-warning:hover {
+    background: #ffaa00;
+    transform: scale(1.05);
+}
+
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .our-commitment {
+        padding: 100px 5%;
+    }
+
+    .commitment-overlay {
+        padding: 60px 5%;
+    }
+
+    .commitment-title {
+        font-size: 2rem;
+    }
+
+    .commitment-text {
+        font-size: 1.1rem;
+    }
+
+    .commitment-quote {
+        font-size: 1rem;
+    }
+}
+
+
+/* ✅ ABOUT HERO SECTION */
+.about-hero {
+    background: url("../images/about-bg.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    padding: 120px 10%;
+    text-align: center;
+    color: #fff;
+}
+
+/* ✅ ABOUT US SECTION */
+.about-content {
+    background: linear-gradient(to right, #1a1a1a, #333);
+    color: #fff;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about-text {
+    font-size: 1.3rem;
+    font-weight: 400;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* ✅ ABOUT US INFO BOXES */
+.about-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    min-height: 220px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-box h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.about-box p {
+    font-size: 1rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* ✅ HOVER EFFECT */
+.about-box:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+/* ✅ RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 60px 5%;
+    }
+
+    .about-box {
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* ✅ FADE-IN ANIMATION */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ MAKE SURE ELEMENTS ARE VISIBLE WHEN SCROLLED INTO VIEW */
+.animate {
+    opacity: 0; /* ✅ Start Hidden */
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* ✅ MAKE SURE THEY BECOME VISIBLE */
+.animate.visible {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+
+/* ✅ FULL-WIDTH SLIDESHOW */
+.inventory-slideshow {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.inventory-slideshow img {
+    height: 500px;
+    object-fit: cover;
+}
+
+/* ✅ INVENTORY OVERVIEW */
+.inventory-overview {
+    background: linear-gradient(to right, #1a1a1a, #444);
+    color: white;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.inventory-text {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* ✅ INVENTORY FEATURES - FLOWING DESIGN */
+.inventory-features {
+    padding: 60px 10%;
+    background: #0D57A4;
+}
+
+.feature-text {
+    padding: 40px;
+}
+
+.feature-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ✅ RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .inventory-slideshow {
+        height: 300px;
+    }
+
+    .inventory-slideshow img {
+        height: 300px;
+    }
+
+    .feature-text {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .feature-img {
+        height: 250px;
+    }
+}
+
+
+.blue {
+    background: #0D57A4 !important;
+}
+
+.text-black {
+    color: black;
+}
+
+#about-us-list {
+    text-align: left;
+}
